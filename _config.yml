@@ -1,0 +1,8 @@
+title: Python desde cero hasta Pandas
+description: Apuntes de Python y Pandas para FP de grado superior — módulos 00–11
+theme: jekyll-theme-cayman
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
