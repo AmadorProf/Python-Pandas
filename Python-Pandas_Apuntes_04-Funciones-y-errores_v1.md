@@ -182,6 +182,12 @@ Cuando llegues a Pandas, leer un CSV de mil filas será una sola línea (`pd.rea
 
 **04.6** — Escribe una función `aplicar_descuento(precio, porcentaje=10)` con un descuento por defecto del 10%. Que devuelva el precio rebajado. Pruébala con y sin pasar el porcentaje.
 
+**04.7** — Escribe una función `validar_email(email)` que devuelva `True` si el email tiene exactamente un `@`, algo antes y algo después, y un punto en la parte del dominio. Sin regex.
+
+**04.8** — Escribe una función recursiva `factorial(n)`. Si `n` es negativo, lanza un `ValueError` con mensaje descriptivo. Pruébala con 0, 5 y -1.
+
+**04.9** — Escribe una función `contar_lineas(ruta)` que devuelva el número de líneas de un archivo. Si el archivo no existe, devuelve `None` sin interrumpir el programa.
+
 ---
 
 <details markdown="1">
@@ -271,4 +277,53 @@ print(aplicar_descuento(100))      # 90.0  (descuento por defecto)
 print(aplicar_descuento(100, 25))  # 75.0
 ```
 
+
+---
+
+**04.7**
+```python
+def validar_email(email):
+    if email.count("@") != 1:
+        return False
+    local, dominio = email.split("@")
+    return bool(local) and "." in dominio and not dominio.startswith(".")
+
+print(validar_email("ada@lovelace.io"))   # True
+print(validar_email("sin-arroba"))        # False
+print(validar_email("doble@@arroba.es"))  # False
+```
+
+---
+
+**04.8**
+```python
+def factorial(n):
+    if n < 0:
+        raise ValueError(f"El factorial no está definido para {n}")
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(0))   # 1
+print(factorial(5))   # 120
+try:
+    factorial(-1)
+except ValueError as e:
+    print(e)
+```
+
+---
+
+**04.9**
+```python
+def contar_lineas(ruta):
+    try:
+        with open(ruta, "r", encoding="utf-8") as f:
+            return sum(1 for _ in f)
+    except FileNotFoundError:
+        return None
+
+print(contar_lineas("cuadrados.txt"))   # 10
+print(contar_lineas("no_existe.txt"))   # None
+```
 </details>

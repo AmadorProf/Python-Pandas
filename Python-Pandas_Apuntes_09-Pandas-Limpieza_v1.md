@@ -203,6 +203,12 @@ Parte del `df` sucio del principio del módulo.
 
 **09.7** — Crea una columna `franja` que clasifique la edad en "menor de 21" o "21 o más", usando `apply` o `map`.
 
+**09.8** — Elimina las filas donde más del 30% de las columnas son nulas. Usa el parámetro `thresh` de `dropna` calculando el mínimo de valores no nulos requeridos.
+
+**09.9** — Normaliza una columna numérica con min-max: `(x - min) / (max - min)`. Hazlo con operaciones vectorizadas y comprueba que el mínimo resultante es 0.0 y el máximo es 1.0.
+
+**09.10** — Tienes una columna con teléfonos mal formateados (`"  666-123 456"`, `"(+34) 666.123.456"`). Crea una columna `telefono_limpio` con solo los dígitos, usando `.str.replace` con regex.
+
 ---
 
 <details markdown="1">
@@ -269,4 +275,34 @@ df["franja"] = df["edad"].apply(lambda x: "menor de 21" if x < 21 else "21 o má
 print(df[["edad", "franja"]])
 ```
 
+
+---
+
+**09.8**
+```python
+n_columnas = df.shape[1]
+min_no_nulos = int(n_columnas * 0.7)
+df_limpio = df.dropna(thresh=min_no_nulos)
+print(f"Filas antes: {len(df)}, después: {len(df_limpio)}")
+```
+
+---
+
+**09.9**
+```python
+col = df["salario"]
+normalizada = (col - col.min()) / (col.max() - col.min())
+df["salario_norm"] = normalizada
+print(f"Mín: {normalizada.min():.1f}, Máx: {normalizada.max():.1f}")
+# Mín: 0.0, Máx: 1.0
+```
+
+---
+
+**09.10**
+```python
+df["telefono_limpio"] = df["telefono"].str.replace(r"[^\d]", "", regex=True)
+print(df[["telefono", "telefono_limpio"]].head())
+```
+`[^\d]` elimina cualquier carácter que no sea dígito.
 </details>

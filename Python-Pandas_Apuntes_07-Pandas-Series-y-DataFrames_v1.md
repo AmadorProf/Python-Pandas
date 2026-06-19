@@ -203,6 +203,12 @@ Usa el DataFrame `ventas` de arriba en todos.
 
 **07.6** — Crea una columna `cara` que valga `True` si el precio supera 50 y `False` si no. ¿Cuántos productos son "caros"?
 
+**07.7** — Crea un DataFrame con 5 películas (título, director, año, recaudación en millones). Añade una columna `decada` calculada a partir del año. Ordena por recaudación descendente.
+
+**07.8** — Dado un DataFrame de alumnos (nombre, nota_teoria, nota_practica), calcula `nota_final` = 40% teoría + 60% práctica, redondéala a un decimal y añade una columna `aprobado` (True si >= 5).
+
+**07.9** — Crea una `pd.Series` con ventas de los 7 días de la semana, con los días como índice. Calcula la media solo de los días laborables (lunes–viernes) sin escribir esos valores a mano.
+
 ---
 
 <details markdown="1">
@@ -259,4 +265,50 @@ ventas["cara"] = ventas["precio"] > 50
 print(ventas["cara"].sum())   # 3  (True cuenta como 1)
 ```
 
+
+---
+
+**07.7**
+```python
+import pandas as pd
+
+peliculas = pd.DataFrame({
+    "titulo": ["El Padrino", "Titanic", "Avengers", "Matrix", "Inception"],
+    "director": ["Coppola", "Cameron", "Russo", "Wachowski", "Nolan"],
+    "anio": [1972, 1997, 2019, 1999, 2010],
+    "recaudacion": [245, 2187, 2798, 463, 836]
+})
+peliculas["decada"] = (peliculas["anio"] // 10) * 10
+print(peliculas.sort_values("recaudacion", ascending=False))
+```
+
+---
+
+**07.8**
+```python
+import pandas as pd
+
+alumnos = pd.DataFrame({
+    "nombre": ["Ada", "Leo", "Zara", "Iván", "Mía"],
+    "nota_teoria": [6, 4, 8, 5, 7],
+    "nota_practica": [7, 5, 9, 6, 4]
+})
+alumnos["nota_final"] = (
+    alumnos["nota_teoria"] * 0.4 + alumnos["nota_practica"] * 0.6
+).round(1)
+alumnos["aprobado"] = alumnos["nota_final"] >= 5
+print(alumnos)
+```
+
+---
+
+**07.9**
+```python
+import pandas as pd
+
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+ventas = pd.Series([120, 95, 140, 110, 130, 200, 85], index=dias)
+laborables = ventas[:"Viernes"]
+print(f"Media laborables: {laborables.mean():.1f}")
+```
 </details>

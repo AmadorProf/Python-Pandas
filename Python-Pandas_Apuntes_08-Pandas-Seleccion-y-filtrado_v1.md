@@ -169,6 +169,12 @@ Usa el `df` de alumnos del principio (antes de las modificaciones de la sección
 
 **08.8** — ¿Cuál es la nota media de los alumnos de DAW? (Filtra y luego `.mean()` sobre la columna nota.)
 
+**08.9** — Con `loc`, cambia la nota de un alumno concreto por su nombre. Luego usa `iloc` para seleccionar las filas 1 a 3 y las columnas en posición 0 y 2.
+
+**08.10** — Filtra los alumnos cuyo nombre empiece por vocal. Usa `.str.startswith()` pasándole una tupla de vocales en mayúsculas y minúsculas.
+
+**08.11** — Crea dos masks: (a) alumnos con nota >= 7 y de ciclo DAW; (b) alumnos con nota < 5 o de otro ciclo. Muestra cada grupo en un DataFrame separado.
+
 ---
 
 <details markdown="1">
@@ -233,4 +239,36 @@ print(df[df["ciudad"].isin(["Madrid", "Sevilla"])])
 print(df[df["ciclo"] == "DAW"]["nota"].mean())   # 6.0
 ```
 
+
+---
+
+**08.9**
+```python
+# Cambiar nota con loc:
+df.loc[df["nombre"] == "Ada", "nota"] = 9.5
+print(df.loc[df["nombre"] == "Ada", ["nombre", "nota"]])
+
+# Filas 1-3, columnas 0 y 2 con iloc:
+print(df.iloc[1:4, [0, 2]])
+```
+
+---
+
+**08.10**
+```python
+vocales = ("A", "E", "I", "O", "U", "a", "e", "i", "o", "u")
+filtrado = df[df["nombre"].str.startswith(vocales)]
+print(filtrado)
+```
+
+---
+
+**08.11**
+```python
+buenos = df[(df["nota"] >= 7) & (df["ciclo"] == "DAW")]
+print("Nota alta en DAW:\n", buenos)
+
+otros = df[(df["nota"] < 5) | (df["ciclo"] != "DAW")]
+print("Nota baja o fuera de DAW:\n", otros)
+```
 </details>

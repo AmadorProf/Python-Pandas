@@ -178,6 +178,12 @@ No te obsesiones con los generadores ahora. Basta con que reconozcas la sintaxis
 
 **05.6** — Crea una clase `Termometro` que guarde una lista de temperaturas. Métodos: `registrar(temp)`, `media()`, `maxima()` y `minima()`. Registra varias temperaturas y muestra el resumen.
 
+**05.7** — Crea una clase `Pila` (stack) con métodos `push(item)`, `pop()` (que lanza `IndexError` si está vacía), `peek()` (ver el tope sin extraer) y una propiedad `vacia`.
+
+**05.8** — Con comprensión de diccionario, crea un diccionario que mapee cada número del 1 al 15 con su representación binaria como string (pista: `f"{n:b}"`).
+
+**05.9** — Escribe una función generadora `pares_infinitos()` que `yield` los números pares indefinidamente. Usa `itertools.islice` para obtener los primeros 10.
+
 ---
 
 <details markdown="1">
@@ -280,4 +286,60 @@ for temp in [22, 19, 25, 30, 18]:
 print(f"Media: {t.media()}, Máx: {t.maxima()}, Mín: {t.minima()}")
 ```
 
+
+---
+
+**05.7**
+```python
+class Pila:
+    def __init__(self):
+        self._elementos = []
+
+    def push(self, item):
+        self._elementos.append(item)
+
+    def pop(self):
+        if self.vacia:
+            raise IndexError("La pila está vacía")
+        return self._elementos.pop()
+
+    def peek(self):
+        if self.vacia:
+            raise IndexError("La pila está vacía")
+        return self._elementos[-1]
+
+    @property
+    def vacia(self):
+        return len(self._elementos) == 0
+
+p = Pila()
+p.push(1); p.push(2); p.push(3)
+print(p.peek())   # 3
+print(p.pop())    # 3
+```
+
+---
+
+**05.8**
+```python
+binarios = {n: f"{n:b}" for n in range(1, 16)}
+print(binarios)
+# {1: '1', 2: '10', 3: '11', 4: '100', ...}
+```
+
+---
+
+**05.9**
+```python
+from itertools import islice
+
+def pares_infinitos():
+    n = 0
+    while True:
+        yield n
+        n += 2
+
+print(list(islice(pares_infinitos(), 10)))
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
 </details>

@@ -32,6 +32,10 @@ Python 3.10 o superior y, a partir del módulo 06, las librerías NumPy y Pandas
 | 09 | [Pandas — Limpieza](Python-Pandas_Apuntes_09-Pandas-Limpieza_v1) | Nulos, duplicados, tipos, texto |
 | 10 | [Pandas — GroupBy y merge](Python-Pandas_Apuntes_10-Pandas-GroupBy-y-merge_v1) | Agrupaciones, pivot, uniones de tablas |
 | 11 | [Series temporales y proyecto](Python-Pandas_Apuntes_11-Pandas-Series-temporales-y-proyecto_v1) | Fechas, visualización, proyecto final |
+| 12 | [Archivos y formatos](Python-Pandas_Apuntes_12-Archivos-y-formatos_v1) | CSV, JSON, Excel con Pandas; rutas con pathlib |
+| 13 | [Visualización](Python-Pandas_Apuntes_13-Visualizacion_v1) | Matplotlib y Seaborn: líneas, barras, scatter, heatmap |
+| 14 | [Pandas avanzado](Python-Pandas_Apuntes_14-Pandas-avanzado_v1) | apply, query, method chaining, MultiIndex, memoria |
+| 15 | [APIs y requests](Python-Pandas_Apuntes_15-APIs-y-requests_v1) | HTTP, JSON a DataFrame, autenticación, paginación |
 
 ## Ruta recomendada
 

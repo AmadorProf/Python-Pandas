@@ -28,9 +28,15 @@ Python 3.10 o superior y, a partir del módulo 06, las librerías NumPy y Pandas
 | 09 | `..._09-Pandas-Limpieza_v1.md` | Nulos, duplicados, tipos, texto |
 | 10 | `..._10-Pandas-GroupBy-y-merge_v1.md` | Agrupaciones, pivot, uniones de tablas |
 | 11 | `..._11-Pandas-Series-temporales-y-proyecto_v1.md` | Fechas, visualización, proyecto final |
+| 12 | `..._12-Archivos-y-formatos_v1.md` | CSV, JSON, Excel con Pandas; rutas con pathlib |
+| 13 | `..._13-Visualizacion_v1.md` | Matplotlib y Seaborn: gráficos de líneas, barras, scatter, heatmap |
+| 14 | `..._14-Pandas-avanzado_v1.md` | apply, query, method chaining, MultiIndex, optimización de memoria |
+| 15 | `..._15-APIs-y-requests_v1.md` | Peticiones HTTP, JSON a DataFrame, autenticación, paginación |
 
 ## Ruta recomendada
 
-Si vienes de cero, dedica una sesión a cada módulo del 00 al 05. Los módulos de Pandas (07-11) son más densos y conviene repartirlos en dos sesiones cada uno: una para leer y otra para los ejercicios.
+Si vienes de cero, dedica una sesión a cada módulo del 00 al 05. Los módulos de Pandas (07–11) son más densos y conviene repartirlos en dos sesiones cada uno: una para leer y otra para los ejercicios.
 
-Si ya programas y solo quieres Pandas, repasa por encima el 03 (estructuras de datos) y el 06 (NumPy) y salta al 07.
+Los módulos 12–15 son independientes entre sí y pueden hacerse en cualquier orden una vez dominado el bloque de Pandas.
+
+Si ya programas y solo quieres Pandas, repasa el 03 (estructuras de datos) y el 06 (NumPy) y salta al 07.

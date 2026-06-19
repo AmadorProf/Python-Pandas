@@ -173,6 +173,12 @@ Este corte con `[inicio:fin]` se llama *slicing* y es uno de los conceptos más 
 
 **01.5** — Pide un nombre completo ("Ada Lovelace") y muestra solo las iniciales ("A.L."). Pista: `split()` separa por el espacio y luego coges el primer carácter de cada parte.
 
+**01.6** — Formatea el número `1234567.891` para que se muestre como `"1.234.567,89 €"` (separador de miles con punto, dos decimales con coma). Pista: usa `f"{n:,.2f}"` y sustituye los separadores con `replace`.
+
+**01.7** — Escribe una expresión que determine si un año es bisiesto: divisible entre 4, excepto centenarios, salvo que también sean divisibles entre 400. Prueba con 2000, 1900, 2024 y 2023.
+
+**01.8** — Pide una palabra al usuario y comprueba si es palíndromo (se lee igual al revés). Ignora mayúsculas. Pruébalo con "Ana", "Python" y "reconocer".
+
 ---
 
 <details markdown="1">
@@ -231,4 +237,35 @@ iniciales = partes[0][0] + "." + partes[1][0] + "."
 print(iniciales)
 ```
 
+
+---
+
+**01.6**
+```python
+n = 1234567.891
+formateado = f"{n:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+print(f"{formateado} €")   # 1.234.567,89 €
+```
+
+---
+
+**01.7**
+```python
+def es_bisiesto(año):
+    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
+
+for a in [2000, 1900, 2024, 2023]:
+    print(a, es_bisiesto(a))
+# 2000 True | 1900 False | 2024 True | 2023 False
+```
+
+---
+
+**01.8**
+```python
+palabra = input("Escribe una palabra: ").lower()
+es_palindromo = palabra == palabra[::-1]
+print("Es palíndromo" if es_palindromo else "No es palíndromo")
+```
+`[::-1]` invierte la cadena con slicing de paso -1.
 </details>

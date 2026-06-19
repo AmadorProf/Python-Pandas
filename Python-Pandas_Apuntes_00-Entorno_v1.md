@@ -112,6 +112,12 @@ No comentes lo obvio (`x = x + 1  # suma uno a x` no aporta nada). Comenta el *p
 
 **00.4** — Modifica el script anterior para que calcule e imprima en qué año naciste, restando tu edad al año actual (2026). No escribas el año de nacimiento a mano: que lo calcule el programa.
 
+**00.5** — Abre el intérprete interactivo y comprueba el tipo de estos valores: `3`, `3.0`, `"3"`, `True`, `None`. Usa `type()` sobre cada uno y anota los resultados.
+
+**00.6** — Escribe un script que importe `sys` y muestre tres cosas: la versión de Python (`sys.version`), la ruta del ejecutable (`sys.executable`) y los tres primeros directorios de búsqueda de módulos (`sys.path[:3]`).
+
+**00.7** — Instala la librería `rich` con pip (`pip install rich`). Úsala para imprimir un mensaje con color: `from rich import print; print("[bold green]Python listo[/bold green]")`. Si ya la tienes, prueba a formatear un número con `rich.pretty`.
+
 ---
 
 <details markdown="1">
@@ -149,4 +155,41 @@ anio_nacimiento = anio_actual - edad
 print(f"Soy {nombre}, estudio {ciclo} y nací en {anio_nacimiento}")
 ```
 
+
+---
+
+**00.5**
+```python
+>>> type(3)
+<class 'int'>
+>>> type(3.0)
+<class 'float'>
+>>> type("3")
+<class 'str'>
+>>> type(True)
+<class 'bool'>
+>>> type(None)
+<class 'NoneType'>
+```
+
+---
+
+**00.6**
+```python
+import sys
+print(sys.version)
+print(sys.executable)
+print(sys.path[:3])
+```
+
+---
+
+**00.7**
+```bash
+pip install rich
+```
+```python
+from rich import print
+print("[bold green]Python listo[/bold green]")
+```
 </details>

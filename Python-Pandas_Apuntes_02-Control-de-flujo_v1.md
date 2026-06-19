@@ -181,6 +181,12 @@ Interioriza estos dos esqueletos. Cuando pases a NumPy y Pandas verás que exist
 
 **02.6** — Dada la lista `[3, 8, 1, 9, 4, 7]`, encuentra el número mayor sin usar la función `max()`. Recórrela con un `for` y ve guardando el mayor visto hasta el momento.
 
+**02.7** — Imprime todos los números primos del 1 al 100. Para cada número, comprueba si algún entero entre 2 y su raíz cuadrada lo divide.
+
+**02.8** — Genera los primeros N números de Fibonacci con un bucle `while` (pide N al usuario). La secuencia empieza: 0, 1, 1, 2, 3, 5, 8…
+
+**02.9** — Simula una mini calculadora con un bucle. El usuario escribe operaciones en formato `5 + 3` o `10 / 2`. El bucle termina cuando escribe `salir`. Gestiona la división entre cero.
+
 ---
 
 <details markdown="1">
@@ -263,4 +269,52 @@ for n in numeros:
 print(mayor)   # 9
 ```
 
+
+---
+
+**02.7**
+```python
+for n in range(2, 101):
+    primo = True
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            primo = False
+            break
+    if primo:
+        print(n, end=" ")
+```
+
+---
+
+**02.8**
+```python
+n = int(input("¿Cuántos números de Fibonacci? "))
+a, b = 0, 1
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+```
+
+---
+
+**02.9**
+```python
+while True:
+    entrada = input("Operación (o 'salir'): ")
+    if entrada == "salir":
+        break
+    partes = entrada.split()
+    if len(partes) != 3:
+        print("Formato: número operador número")
+        continue
+    a, op, b = float(partes[0]), partes[1], float(partes[2])
+    if op == "+":   print(a + b)
+    elif op == "-": print(a - b)
+    elif op == "*": print(a * b)
+    elif op == "/":
+        if b == 0: print("No se puede dividir entre cero")
+        else:      print(a / b)
+    else:
+        print("Operador no reconocido")
+```
 </details>

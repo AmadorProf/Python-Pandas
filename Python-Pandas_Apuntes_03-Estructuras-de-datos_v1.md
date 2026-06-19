@@ -213,6 +213,12 @@ ventas = [
 ```
 Calcula el ingreso total (precio × unidades sumado de todos) y muestra qué producto generó más ingresos.
 
+**03.7** — Dada una lista de palabras, cuenta cuántas veces aparece cada una (ignorando mayúsculas). Construye el resultado con un diccionario, sin usar `collections.Counter`.
+
+**03.8** — Tienes una lista de tuplas `(nombre, nota)`. Ordénala de mayor a menor nota. En caso de empate, ordénalos alfabéticamente por nombre.
+
+**03.9** — Escribe una función `sin_duplicados(lista)` que devuelva los elementos sin repetición, manteniendo el orden de primera aparición.
+
 ---
 
 <details markdown="1">
@@ -301,4 +307,44 @@ print(f"Ingreso total: {total} €")              # 505 €
 print(f"Mejor producto: {mejor_producto} ({mejor_ingreso} €)")  # Monitor (300 €)
 ```
 
+
+---
+
+**03.7**
+```python
+palabras = ["Python", "es", "python", "es", "genial", "Python"]
+contador = {}
+for p in palabras:
+    p = p.lower()
+    contador[p] = contador.get(p, 0) + 1
+print(contador)
+# {'python': 3, 'es': 2, 'genial': 1}
+```
+
+---
+
+**03.8**
+```python
+alumnos = [("Zara", 8), ("Ada", 9), ("Leo", 8), ("Ana", 9)]
+ordenados = sorted(alumnos, key=lambda x: (-x[1], x[0]))
+print(ordenados)
+# [('Ada', 9), ('Ana', 9), ('Leo', 8), ('Zara', 8)]
+```
+`-x[1]` invierte el orden de nota (mayor primero) y `x[0]` rompe empates alfabéticamente.
+
+---
+
+**03.9**
+```python
+def sin_duplicados(lista):
+    vistos = set()
+    resultado = []
+    for item in lista:
+        if item not in vistos:
+            resultado.append(item)
+            vistos.add(item)
+    return resultado
+
+print(sin_duplicados([3, 1, 4, 1, 5, 3, 2, 5]))   # [3, 1, 4, 5, 2]
+```
 </details>

@@ -171,6 +171,12 @@ Sumar un millón de números con un bucle de Python tarda; con NumPy es casi ins
 
 **06.6** — Tienes los precios `np.array([19.99, 5.50, 100, 45.30, 8])` sin IVA. Crea un nuevo array con el precio con IVA (21%) redondeado a 2 decimales (usa `np.round`).
 
+**06.7** — Simula 10.000 lanzamientos de dos dados y cuenta cuántas veces sale cada suma posible (del 2 al 12). Muestra los resultados.
+
+**06.8** — Dado `distancias = np.array([10, 22, 30, 45, 55])` en km (una medición por hora), calcula la velocidad entre cada par de puntos consecutivos usando `np.diff`.
+
+**06.9** — Genera una matriz 5×5 de enteros aleatorios entre 0 y 100. Binarízala sin bucles: los valores < 50 pasan a 0 y los >= 50 pasan a 1.
+
 ---
 
 <details markdown="1">
@@ -233,4 +239,42 @@ con_iva = np.round(precios * 1.21, 2)
 print(con_iva)   # [ 24.19   6.66 121.    54.81   9.68]
 ```
 
+
+---
+
+**06.7**
+```python
+import numpy as np
+
+dado1 = np.random.randint(1, 7, 10000)
+dado2 = np.random.randint(1, 7, 10000)
+sumas = dado1 + dado2
+
+for v in range(2, 13):
+    conteo = (sumas == v).sum()
+    print(f"{v:2d}: {conteo:5d}  {'█' * (conteo // 100)}")
+```
+
+---
+
+**06.8**
+```python
+import numpy as np
+
+distancias = np.array([10, 22, 30, 45, 55])
+velocidades = np.diff(distancias)
+print("Velocidades (km/h):", velocidades)   # [12  8 15 10]
+```
+
+---
+
+**06.9**
+```python
+import numpy as np
+
+m = np.random.randint(0, 101, (5, 5))
+print("Original:\n", m)
+binarizada = (m >= 50).astype(int)
+print("Binarizada:\n", binarizada)
+```
 </details>

@@ -202,6 +202,12 @@ Usa la tabla `ventas` (y `vendedores` donde se indique).
 
 **10.8** — ¿Qué ciudad tiene el ticket medio (importe medio por venta) más alto?
 
+**10.9** — Usa `pd.merge` con `how="outer"` entre dos DataFrames con algunas filas sin par. Identifica qué filas están solo en cada uno (columnas del otro lado serán NaN).
+
+**10.10** — Crea una `pivot_table` que muestre el importe total por vendedor (filas) y ciudad (columnas). Añade totales con `margins=True`.
+
+**10.11** — Usa `groupby` + `transform("mean")` para añadir al DataFrame original una columna con la media del importe del grupo de cada fila, sin reducir el número de filas.
+
 ---
 
 <details markdown="1">
@@ -279,4 +285,45 @@ print(ventas.groupby("ciudad")["importe"].mean().sort_values(ascending=False).he
 # Madrid    390.0
 ```
 
+
+---
+
+**10.9**
+```python
+import pandas as pd
+
+df1 = pd.DataFrame({"id": [1, 2, 3, 4], "valor_a": ["a1", "a2", "a3", "a4"]})
+df2 = pd.DataFrame({"id": [2, 3, 5, 6], "valor_b": ["b2", "b3", "b5", "b6"]})
+
+outer = pd.merge(df1, df2, on="id", how="outer")
+print(outer)
+print("Solo en df1:", outer[outer["valor_b"].isna()]["id"].tolist())
+print("Solo en df2:", outer[outer["valor_a"].isna()]["id"].tolist())
+```
+
+---
+
+**10.10**
+```python
+tabla = pd.pivot_table(
+    ventas,
+    values="importe",
+    index="vendedor",
+    columns="ciudad",
+    aggfunc="sum",
+    fill_value=0,
+    margins=True,
+    margins_name="Total"
+)
+print(tabla)
+```
+
+---
+
+**10.11**
+```python
+ventas["media_ciudad"] = ventas.groupby("ciudad")["importe"].transform("mean")
+print(ventas[["ciudad", "importe", "media_ciudad"]].head(8))
+```
+`transform` devuelve una Serie del mismo tamaño que el DataFrame original, a diferencia de `agg` que reduce a una fila por grupo.
 </details>
