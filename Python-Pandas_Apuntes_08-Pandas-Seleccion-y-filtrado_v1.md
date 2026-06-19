@@ -171,7 +171,7 @@ Usa el `df` de alumnos del principio (antes de las modificaciones de la sección
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **08.1**
@@ -180,6 +180,8 @@ print(df.loc["Juan"])
 print(df.iloc[3])
 ```
 
+---
+
 **08.2**
 ```python
 print(df[["edad", "nota"]])
@@ -187,15 +189,21 @@ print(df[["edad", "nota"]])
 print(df.loc[:, ["edad", "nota"]])
 ```
 
+---
+
 **08.3**
 ```python
 print(df[df["nota"] >= 5])
 ```
 
+---
+
 **08.4**
 ```python
 print(df[(df["ciudad"] == "Madrid") & (df["edad"] > 20)])
 ```
+
+---
 
 **08.5**
 ```python
@@ -203,16 +211,22 @@ seleccion = df[df["ciclo"].isin(["DAW", "ASIR"])]
 print(seleccion.sort_values("nota", ascending=False))
 ```
 
+---
+
 **08.6**
 ```python
 print(df.sort_values("nota", ascending=False).head(2)[["nota"]])
 # (el nombre es el índice, así que sale solo)
 ```
 
+---
+
 **08.7**
 ```python
 print(df[df["ciudad"].isin(["Madrid", "Sevilla"])])
 ```
+
+---
 
 **08.8**
 ```python

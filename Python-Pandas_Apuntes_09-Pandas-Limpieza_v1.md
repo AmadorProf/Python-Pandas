@@ -205,7 +205,7 @@ Parte del `df` sucio del principio del módulo.
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **09.1**
@@ -214,11 +214,15 @@ print(df.isnull().sum())
 print("Total:", df.isnull().sum().sum())   # 3
 ```
 
+---
+
 **09.2**
 ```python
 df["nombre"] = df["nombre"].str.strip().str.title()
 print(df["nombre"].nunique())   # cuenta nombres únicos (los None no cuentan)
 ```
+
+---
 
 **09.3**
 ```python
@@ -229,12 +233,16 @@ print(df["ciudad"].value_counts())
 # Sevilla    2
 ```
 
+---
+
 **09.4**
 ```python
 df["salario"] = df["salario"].str.replace(".", "", regex=False)
 df["salario"] = pd.to_numeric(df["salario"], errors="coerce")
 print(df["salario"].mean())   # ~1508.33 (ignora el NaN)
 ```
+
+---
 
 **09.5**
 ```python
@@ -243,6 +251,8 @@ df["salario"] = df["salario"].fillna(df["salario"].mean())
 print(df.isnull().sum())
 ```
 
+---
+
 **09.6**
 ```python
 df["nombre"] = df["nombre"].str.strip().str.title()
@@ -250,6 +260,8 @@ df = df.drop_duplicates()
 print(len(df))
 ```
 Tras normalizar, "  Ada" y "Ada" pasan a ser iguales, así que la fila repetida de Ada se elimina.
+
+---
 
 **09.7**
 ```python

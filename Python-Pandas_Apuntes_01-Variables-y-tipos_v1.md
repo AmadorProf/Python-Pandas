@@ -175,7 +175,7 @@ Este corte con `[inicio:fin]` se llama *slicing* y es uno de los conceptos más 
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **01.1**
@@ -189,6 +189,8 @@ print(f"División: {a / b}")
 print(f"Resto: {a % b}")
 ```
 
+---
+
 **01.2**
 ```python
 n = int(input("Número: "))
@@ -199,6 +201,8 @@ else:
 ```
 (El `if`/`else` se ve a fondo en el módulo 02; aquí adelantamos su uso.)
 
+---
+
 **01.3**
 ```python
 frase = input("Escribe una frase: ")
@@ -208,12 +212,16 @@ print(len(frase))
 print(frase.strip())
 ```
 
+---
+
 **01.4**
 ```python
 base = float(input("Precio base: "))
 final = base * 1.21
 print(f"Precio final: {round(final, 2)} €")
 ```
+
+---
 
 **01.5**
 ```python

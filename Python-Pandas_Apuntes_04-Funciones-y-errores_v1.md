@@ -184,7 +184,7 @@ Cuando llegues a Pandas, leer un CSV de mil filas será una sola línea (`pd.rea
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **04.1**
@@ -202,6 +202,8 @@ for x in [2, 4, 7, 9, 13, 100]:
 ```
 Solo hace falta comprobar divisores hasta la raíz cuadrada de `n`: si no hay divisor por debajo de ahí, no lo hay por encima.
 
+---
+
 **04.2**
 ```python
 def celsius_a_fahrenheit(c):
@@ -213,6 +215,8 @@ def fahrenheit_a_celsius(f):
 print(celsius_a_fahrenheit(100))   # 212.0
 print(fahrenheit_a_celsius(32))    # 0.0
 ```
+
+---
 
 **04.3**
 ```python
@@ -227,6 +231,8 @@ def contar_vocales(texto):
 print(contar_vocales("Murciélago"))   # 5
 ```
 
+---
+
 **04.4**
 ```python
 def media_segura(numeros):
@@ -238,6 +244,8 @@ def media_segura(numeros):
 print(media_segura([4, 6, 8]))   # 6.0
 print(media_segura([]))          # 0
 ```
+
+---
 
 **04.5**
 ```python
@@ -251,6 +259,8 @@ with open("cuadrados.txt", "r", encoding="utf-8") as f:
         total += int(linea.strip())
 print(total)   # 385
 ```
+
+---
 
 **04.6**
 ```python

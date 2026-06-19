@@ -205,7 +205,7 @@ Usa el DataFrame `ventas` de arriba en todos.
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **07.1**
@@ -215,17 +215,23 @@ print(ventas.shape)    # (8, 5)
 print(ventas.dtypes)
 ```
 
+---
+
 **07.2**
 ```python
 print(ventas.describe())
 # El precio medio (mean de 'precio') es 64.125
 ```
 
+---
+
 **07.3**
 ```python
 ventas["ingreso"] = ventas["precio"] * ventas["unidades"]
 print(ventas)
 ```
+
+---
 
 **07.4**
 ```python
@@ -237,11 +243,15 @@ print(ventas["ciudad"].value_counts())
 # Bilbao     2
 ```
 
+---
+
 **07.5**
 ```python
 ventas["ingreso"] = ventas["precio"] * ventas["unidades"]
 print(ventas["ingreso"].sum())   # 1452
 ```
+
+---
 
 **07.6**
 ```python

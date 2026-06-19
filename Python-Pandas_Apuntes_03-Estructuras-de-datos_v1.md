@@ -215,7 +215,7 @@ Calcula el ingreso total (precio × unidades sumado de todos) y muestra qué pro
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **03.1**
@@ -226,6 +226,8 @@ print("Mínima:", min(temperaturas))
 print("Media:", sum(temperaturas) / len(temperaturas))
 ```
 
+---
+
 **03.2**
 ```python
 notas = [4, 7, 9, 3, 6, 8, 5]
@@ -235,6 +237,8 @@ for n in notas:
         aprobadas.append(n)
 print(aprobadas)   # [7, 9, 6, 8, 5]
 ```
+
+---
 
 **03.3**
 ```python
@@ -247,6 +251,8 @@ libro = {
 for clave, valor in libro.items():
     print(f"{clave}: {valor}")
 ```
+
+---
 
 **03.4**
 ```python
@@ -261,12 +267,16 @@ print(conteo)
 # {'el': 3, 'gato': 1, 'y': 2, 'perro': 1, 'pez': 1}
 ```
 
+---
+
 **03.5**
 ```python
 nombres = ["Ana", "Luis", "Ana", "Marta", "Luis", "Ana"]
 distintos = set(nombres)
 print(f"Hay {len(distintos)} nombres distintos: {distintos}")
 ```
+
+---
 
 **03.6**
 ```python

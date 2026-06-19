@@ -173,7 +173,7 @@ Sumar un millón de números con un bucle de Python tarda; con NumPy es casi ins
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **06.1**
@@ -183,6 +183,8 @@ a = np.arange(1, 21)
 print(a * 3)
 ```
 
+---
+
 **06.2**
 ```python
 temperaturas = np.array([18, 25, 30, 15, 22, 28, 12])
@@ -190,6 +192,8 @@ media = temperaturas.mean()
 print(f"Media: {media}, Máx: {temperaturas.max()}, Mín: {temperaturas.min()}")
 print(temperaturas[temperaturas > media])
 ```
+
+---
 
 **06.3**
 ```python
@@ -199,6 +203,8 @@ print("Seises:", (tiradas == 6).sum())   # alrededor de 166
 ```
 `(tiradas == 6)` es una máscara de True/False; sumarla cuenta los True (True vale 1).
 
+---
+
 **06.4**
 ```python
 notas = np.array([4, 7, 9, 3, 6, 8, 5, 2])
@@ -206,6 +212,8 @@ aprobadas = notas[notas >= 5]
 print("Aprobadas:", len(aprobadas))       # 5
 print("Media de aprobadas:", aprobadas.mean())  # 7.0
 ```
+
+---
 
 **06.5**
 ```python
@@ -215,6 +223,8 @@ print("Total:", m.sum())            # 45
 print("Por filas:", m.sum(axis=1))  # [ 6 15 24]
 print("Por columnas:", m.sum(axis=0))  # [12 15 18]
 ```
+
+---
 
 **06.6**
 ```python

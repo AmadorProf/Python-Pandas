@@ -180,7 +180,7 @@ No te obsesiones con los generadores ahora. Basta con que reconozcas la sintaxis
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **05.1**
@@ -205,6 +205,8 @@ cuenta.retirar(120)
 print(cuenta.saldo)   # 30
 ```
 
+---
+
 **05.2**
 ```python
 class Rectangulo:
@@ -226,11 +228,15 @@ print(r)              # Rectángulo 4x5 (área 20)
 print(r.perimetro()) # 18
 ```
 
+---
+
 **05.3**
 ```python
 multiplos = [n for n in range(1, 51) if n % 3 == 0]
 print(multiplos)
 ```
+
+---
 
 **05.4**
 ```python
@@ -239,12 +245,16 @@ rebajados = [p * 0.9 for p in precios if p > 20]
 print(rebajados)   # [22.5, 90.0, 42.3]
 ```
 
+---
+
 **05.5**
 ```python
 palabras = ["python", "datos", "pandas"]
 longitudes = {p: len(p) for p in palabras}
 print(longitudes)   # {'python': 6, 'datos': 5, 'pandas': 6}
 ```
+
+---
 
 **05.6**
 ```python

@@ -183,7 +183,7 @@ Interioriza estos dos esqueletos. Cuando pases a NumPy y Pandas verás que exist
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **02.1**
@@ -197,12 +197,16 @@ else:
     print("Cero")
 ```
 
+---
+
 **02.2**
 ```python
 n = int(input("Número: "))
 for i in range(1, 11):
     print(f"{n} x {i} = {n * i}")
 ```
+
+---
 
 **02.3**
 ```python
@@ -211,6 +215,8 @@ for i in range(1, 101):
     total += i
 print(total)   # 5050
 ```
+
+---
 
 **02.4**
 ```python
@@ -229,6 +235,8 @@ else:
     print("No introdujiste ningún número")
 ```
 
+---
+
 **02.5**
 ```python
 for n in range(1, 51):
@@ -242,6 +250,8 @@ for n in range(1, 51):
         print(n)
 ```
 Importante el orden: la condición de "ambos" va primero, porque si no, nunca se alcanzaría.
+
+---
 
 **02.6**
 ```python

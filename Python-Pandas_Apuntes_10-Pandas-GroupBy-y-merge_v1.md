@@ -204,7 +204,7 @@ Usa la tabla `ventas` (y `vendedores` donde se indique).
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **10.1**
@@ -215,21 +215,29 @@ print(ventas.groupby("vendedor")["importe"].sum())
 # Marta    240
 ```
 
+---
+
 **10.2**
 ```python
 print(ventas.groupby("ciudad")["importe"].agg(["mean", "count"]))
 ```
+
+---
 
 **10.3**
 ```python
 print(ventas.groupby(["fecha", "producto"])["importe"].sum())
 ```
 
+---
+
 **10.4**
 ```python
 print(ventas.pivot_table(index="producto", columns="ciudad",
                          values="importe", aggfunc="sum", fill_value=0))
 ```
+
+---
 
 **10.5**
 ```python
@@ -244,12 +252,16 @@ print(combinado.groupby("equipo")["importe"].sum())
 # Sur       375   (Luis)
 ```
 
+---
+
 **10.6**
 ```python
 izq = ventas.merge(vendedores, on="vendedor", how="left")
 inter = ventas.merge(vendedores, on="vendedor", how="inner")
 ```
 Iván no tiene ninguna venta. Como `merge` parte de las filas de `ventas`, Iván no aparece en *ninguno* de los dos (no hay filas de ventas suyas que casar). Si hicieras `how="right"` o `how="outer"`, sí saldría Iván, con sus importes a `NaN`. La diferencia entre `left` e `inner` se notaría si hubiera una venta con un vendedor que no está en la tabla `vendedores`: `left` la conserva, `inner` la descarta.
+
+---
 
 **10.7**
 ```python
@@ -258,6 +270,8 @@ print(ventas.groupby("vendedor")["importe"].max().sort_values(ascending=False))
 # Luis    300
 # Marta   100
 ```
+
+---
 
 **10.8**
 ```python

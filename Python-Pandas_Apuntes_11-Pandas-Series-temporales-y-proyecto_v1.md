@@ -177,7 +177,7 @@ Resuelve estas preguntas. Las soluciones están al final, pero pelea cada una an
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones del proyecto</summary>
 
 **P1**

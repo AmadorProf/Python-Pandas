@@ -114,16 +114,20 @@ No comentes lo obvio (`x = x + 1  # suma uno a x` no aporta nada). Comenta el *p
 
 ---
 
-<details>
+<details markdown="1">
 <summary>Soluciones</summary>
 
 **00.1** — En Windows suele ser `python`; en macOS y muchas distros de Linux es `python3`. Ambos comandos pueden coexistir. La salida correcta es algo como `Python 3.12.x`.
+
+---
 
 **00.2**
 ```python
 >>> 60 * 60 * 24
 86400
 ```
+
+---
 
 **00.3**
 ```python
@@ -132,6 +136,8 @@ edad = 34
 ciclo = "DAW"
 print(f"Soy {nombre}, tengo {edad} años y estudio el ciclo de {ciclo}")
 ```
+
+---
 
 **00.4**
 ```python
