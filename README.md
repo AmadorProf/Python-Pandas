@@ -13,22 +13,22 @@ Python 3.10 o superior. A partir del módulo 06, también NumPy y Pandas. La ins
 
 | # | Archivo | Qué aprendes |
 |---|---------|--------------|
-| 00 | `..._00-Entorno_v1.md` | Instalar Python, ejecutar tu primer programa, notebooks |
-| 01 | `..._01-Variables-y-tipos_v1.md` | Variables, números, cadenas, booleanos, operadores |
-| 02 | `..._02-Control-de-flujo_v1.md` | Condicionales, bucles `for` y `while` |
-| 03 | `..._03-Estructuras-de-datos_v1.md` | Listas, tuplas, diccionarios, conjuntos |
-| 04 | `..._04-Funciones-y-errores_v1.md` | Funciones, módulos, excepciones, archivos |
-| 05 | `..._05-POO-y-comprensiones_v1.md` | Clases, objetos, comprensiones, generadores |
-| 06 | `..._06-NumPy_v1.md` | Arrays, vectorización, broadcasting |
-| 07 | `..._07-Pandas-Series-y-DataFrames_v1.md` | Estructuras de Pandas, cargar datos |
-| 08 | `..._08-Pandas-Seleccion-y-filtrado_v1.md` | `loc`, `iloc`, filtros booleanos |
-| 09 | `..._09-Pandas-Limpieza_v1.md` | Nulos, duplicados, tipos, texto |
-| 10 | `..._10-Pandas-GroupBy-y-merge_v1.md` | Agrupaciones, pivot, uniones de tablas |
-| 11 | `..._11-Pandas-Series-temporales-y-proyecto_v1.md` | Fechas, visualización, proyecto final |
-| 12 | `..._12-Archivos-y-formatos_v1.md` | CSV, JSON, Excel con Pandas; rutas con pathlib |
-| 13 | `..._13-Visualizacion_v1.md` | Matplotlib y Seaborn: líneas, barras, scatter, heatmap |
-| 14 | `..._14-Pandas-avanzado_v1.md` | `apply`, `query`, method chaining, MultiIndex, optimización |
-| 15 | `..._15-APIs-y-requests_v1.md` | Peticiones HTTP, JSON a DataFrame, autenticación, paginación |
+| 00 | `..._00-Entorno.md` | Instalar Python, ejecutar tu primer programa, notebooks |
+| 01 | `..._01-Variables-y-tipos.md` | Variables, números, cadenas, booleanos, operadores |
+| 02 | `..._02-Control-de-flujo.md` | Condicionales, bucles `for` y `while` |
+| 03 | `..._03-Estructuras-de-datos.md` | Listas, tuplas, diccionarios, conjuntos |
+| 04 | `..._04-Funciones-y-errores.md` | Funciones, módulos, excepciones, archivos |
+| 05 | `..._05-POO-y-comprensiones.md` | Clases, objetos, comprensiones, generadores |
+| 06 | `..._06-NumPy.md` | Arrays, vectorización, broadcasting |
+| 07 | `..._07-Pandas-Series-y-DataFrames.md` | Estructuras de Pandas, cargar datos |
+| 08 | `..._08-Pandas-Seleccion-y-filtrado.md` | `loc`, `iloc`, filtros booleanos |
+| 09 | `..._09-Pandas-Limpieza.md` | Nulos, duplicados, tipos, texto |
+| 10 | `..._10-Pandas-GroupBy-y-merge.md` | Agrupaciones, pivot, uniones de tablas |
+| 11 | `..._11-Pandas-Series-temporales-y-proyecto.md` | Fechas, visualización, proyecto final |
+| 12 | `..._12-Archivos-y-formatos.md` | CSV, JSON, Excel con Pandas; rutas con pathlib |
+| 13 | `..._13-Visualizacion.md` | Matplotlib y Seaborn: líneas, barras, scatter, heatmap |
+| 14 | `..._14-Pandas-avanzado.md` | `apply`, `query`, method chaining, MultiIndex, optimización |
+| 15 | `..._15-APIs-y-requests.md` | Peticiones HTTP, JSON a DataFrame, autenticación, paginación |
 
 ## Cómo usar estos apuntes
 
