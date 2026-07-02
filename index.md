@@ -20,22 +20,22 @@ Python 3.10 o superior y, a partir del módulo 06, las librerías NumPy y Pandas
 
 | # | Módulo | Qué aprendes |
 |---|--------|--------------|
-| 00 | [Entorno](Python-Pandas_Apuntes_00-Entorno_v1) | Instalar Python, ejecutar tu primer programa, notebooks |
-| 01 | [Variables y tipos](Python-Pandas_Apuntes_01-Variables-y-tipos_v1) | Variables, números, cadenas, booleanos, operadores |
-| 02 | [Control de flujo](Python-Pandas_Apuntes_02-Control-de-flujo_v1) | Condicionales, bucles `for` y `while` |
-| 03 | [Estructuras de datos](Python-Pandas_Apuntes_03-Estructuras-de-datos_v1) | Listas, tuplas, diccionarios, conjuntos |
-| 04 | [Funciones y errores](Python-Pandas_Apuntes_04-Funciones-y-errores_v1) | Funciones, módulos, excepciones, archivos |
-| 05 | [POO y comprensiones](Python-Pandas_Apuntes_05-POO-y-comprensiones_v1) | Clases, objetos, comprensiones, generadores |
-| 06 | [NumPy](Python-Pandas_Apuntes_06-NumPy_v1) | Arrays, vectorización, broadcasting |
-| 07 | [Pandas — Series y DataFrames](Python-Pandas_Apuntes_07-Pandas-Series-y-DataFrames_v1) | Estructuras de Pandas, cargar datos |
-| 08 | [Pandas — Selección y filtrado](Python-Pandas_Apuntes_08-Pandas-Seleccion-y-filtrado_v1) | `loc`, `iloc`, filtros booleanos |
-| 09 | [Pandas — Limpieza](Python-Pandas_Apuntes_09-Pandas-Limpieza_v1) | Nulos, duplicados, tipos, texto |
-| 10 | [Pandas — GroupBy y merge](Python-Pandas_Apuntes_10-Pandas-GroupBy-y-merge_v1) | Agrupaciones, pivot, uniones de tablas |
-| 11 | [Series temporales y proyecto](Python-Pandas_Apuntes_11-Pandas-Series-temporales-y-proyecto_v1) | Fechas, visualización, proyecto final |
-| 12 | [Archivos y formatos](Python-Pandas_Apuntes_12-Archivos-y-formatos_v1) | CSV, JSON, Excel con Pandas; rutas con pathlib |
-| 13 | [Visualización](Python-Pandas_Apuntes_13-Visualizacion_v1) | Matplotlib y Seaborn: líneas, barras, scatter, heatmap |
-| 14 | [Pandas avanzado](Python-Pandas_Apuntes_14-Pandas-avanzado_v1) | apply, query, method chaining, MultiIndex, memoria |
-| 15 | [APIs y requests](Python-Pandas_Apuntes_15-APIs-y-requests_v1) | HTTP, JSON a DataFrame, autenticación, paginación |
+| 00 | [Entorno](Python-Pandas_Apuntes_00-Entorno) | Instalar Python, ejecutar tu primer programa, notebooks |
+| 01 | [Variables y tipos](Python-Pandas_Apuntes_01-Variables-y-tipos) | Variables, números, cadenas, booleanos, operadores |
+| 02 | [Control de flujo](Python-Pandas_Apuntes_02-Control-de-flujo) | Condicionales, bucles `for` y `while` |
+| 03 | [Estructuras de datos](Python-Pandas_Apuntes_03-Estructuras-de-datos) | Listas, tuplas, diccionarios, conjuntos |
+| 04 | [Funciones y errores](Python-Pandas_Apuntes_04-Funciones-y-errores) | Funciones, módulos, excepciones, archivos |
+| 05 | [POO y comprensiones](Python-Pandas_Apuntes_05-POO-y-comprensiones) | Clases, objetos, comprensiones, generadores |
+| 06 | [NumPy](Python-Pandas_Apuntes_06-NumPy) | Arrays, vectorización, broadcasting |
+| 07 | [Pandas — Series y DataFrames](Python-Pandas_Apuntes_07-Pandas-Series-y-DataFrames) | Estructuras de Pandas, cargar datos |
+| 08 | [Pandas — Selección y filtrado](Python-Pandas_Apuntes_08-Pandas-Seleccion-y-filtrado) | `loc`, `iloc`, filtros booleanos |
+| 09 | [Pandas — Limpieza](Python-Pandas_Apuntes_09-Pandas-Limpieza) | Nulos, duplicados, tipos, texto |
+| 10 | [Pandas — GroupBy y merge](Python-Pandas_Apuntes_10-Pandas-GroupBy-y-merge) | Agrupaciones, pivot, uniones de tablas |
+| 11 | [Series temporales y proyecto](Python-Pandas_Apuntes_11-Pandas-Series-temporales-y-proyecto) | Fechas, visualización, proyecto final |
+| 12 | [Archivos y formatos](Python-Pandas_Apuntes_12-Archivos-y-formatos) | CSV, JSON, Excel con Pandas; rutas con pathlib |
+| 13 | [Visualización](Python-Pandas_Apuntes_13-Visualizacion) | Matplotlib y Seaborn: líneas, barras, scatter, heatmap |
+| 14 | [Pandas avanzado](Python-Pandas_Apuntes_14-Pandas-avanzado) | apply, query, method chaining, MultiIndex, memoria |
+| 15 | [APIs y requests](Python-Pandas_Apuntes_15-APIs-y-requests) | HTTP, JSON a DataFrame, autenticación, paginación |
 
 ## Ruta recomendada
 
